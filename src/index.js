@@ -9,8 +9,4 @@ import "firebase/compat/storage";
 console.log(firebase);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+root.render(<App />);

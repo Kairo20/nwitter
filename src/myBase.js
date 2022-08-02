@@ -1,15 +1,17 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMIAN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
+  apiKey: "AIzaSyA-9MZ4XnB4iKoLmsUfF__IKUH73k8ZcyI",
+  authDomain: "nwitter-ad0b8.firebaseapp.com",
+  projectId: "nwitter-ad0b8",
+  storageBucket: "nwitter-ad0b8.appspot.com",
+  messagingSenderId: "87596792214",
+  appId: "1:87596792214:web:31290bfe10b05f4b1a85b7",
 };
 
 const app = initializeApp(firebaseConfig);
 export default app;
-export const authService = getAuth();
+export const authService = getAuth(app);
+export const dbService = getFirestore();
